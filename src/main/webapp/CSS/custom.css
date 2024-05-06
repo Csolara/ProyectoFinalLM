@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+body {
+	background-image: url(selva.webp);
+}
+
+.Indominus {
+	background-image: url(BocaI.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.Indoraptor {
+	background-image: url(indoraptorFONDO2.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.fondonegro {
+	background-color: black;
+}
+
+.logoderecha {
+	transform: translateX(20px) translateY(5px);
+}
+
+.Web {
+	transform: translateX(20px);
+}
+
+.morado {
+	color: mediumpurple;
+}
+
+.centro {
+	text-align: center;
+}
+
+.carru {
+	margin-top: 70px;
+	height: 250px;
+}
+
+.centro {
+	text-align: center;
+}
+
+.rex {
+	transform: translateX(100px);
+}
+
+.contrex {
+	margin-top: 70px;
+}
+
+.spino {
+	transform: translateX(200px);
+}
+
+.stego {
+	transform: translateY(50px);
+}
+
+.agrandar:hover {
+	transform: scale(1.4);
+}
+
+.trike {
+	transform: translateY(40px);
+}
+
+.trice {
+	transform: translateY(100px);
+}
+
+.anky {
+	transform: translateY(30px);
+}
+
+.margenabajo {
+	margin-bottom: 70px;
+}
+
+.margenarriba {
+	margin-top: 100px;
+}
+
+.oviraptor {
+	transform: translateY(40px);
+}
+
+.ovitexto {
+	transform: translateY(100px);
+}
+
+.margenmenu {
+	margin-top: 75px;
+}
+
+.menu:hover {
+	background-color: mediumpurple;
+}
+
+.margenizquierda {
+	transform: translateX(95px);
+}
+
+.MASMARGEN {
+	margin-top: 140px;
+}
+
+.JURASICO {
+	font-size: 6em;
+	text-align: center;
+}
+
+.CARNIVOROS{
+	font-size: 3rem;
+	text-align: center;
+	color: red;
+}
+
+.HERBIVOROS{
+	font-size: 3rem;
+	text-align: center;
+	color: seagreen;
+}
+
+.OMNIVOROS{
+	font-size: 3rem;
+	text-align: center;
+	color: yellow;
+}
+
+.rojo {
+	color: red;
+}
+
+.verde {
+	color: seagreen;
+}
+
+.amarillo {
+	color: yellow;
+}
+
+.gris {
+	color: darkgrey;
+}
+
+.blanco {
+	color: white;
+	background-color: #08290C;
+}
+
+.texto {
+	font-size: 20px;
+}
+
+.comprar {
+	font-size: 2em;
+	color: mediumpurple;
+	background-color: white;	
+	text-decoration: none;
+}
+
+.comprar2:hover {
+	background-color: black;
+}
+
+.fotoindoraptor {
+	background-color: black;
+}
+
+.indominus {
+	background-color: black;
+}
+
+.fondoblanco {
+	background-color: white;
+}
+
+.MI {
+	margin-left: 40px;
+}
+
+.ENVIO {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.MIM {
+	margin-left: 90px;
+}
+.dropdown{
+	margin-left: 20px;	
+}
+
+.derecha{
+	margin-left:500px;	
+}
+
+.margencarrito{
+	margin-top: 140px;
+}
