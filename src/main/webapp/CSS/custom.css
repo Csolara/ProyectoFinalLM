@@ -203,3 +203,9 @@ body {
 .margencarrito{
 	margin-top: 140px;
 }
+.mastercard{
+	transform: translateX(7px);
+}
+.sumaryrestar{
+	border: solid black;
+}
