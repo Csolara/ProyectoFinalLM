@@ -121,68 +121,152 @@
 					<div class="custom-control custom-radio">
 						<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
 						<img class="mastercard" src="imagenes/carrito/Pay.png" width="50px" height="20px">
-					</div>	
+					</div>
 					<div class="custom-control custom-radio">
 						<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
 						<img class="mastercard" src="imagenes/carrito/unionpay.png" width="50px" height="25px">
-					</div>			
+					</div>
 					<div class="custom-control custom-radio">
 						<input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
 						<img class="mastercard" src="imagenes/carrito/googlepay.png" width="100px" height="25px">
-					</div>			 
+					</div>
 				</div>
 				<hr class="mb-4">
-				<button class="btn btn-primary btn-lg btn-block" type="submit">Pagar</button>
+				<button class="btn btn-primary btn-lg btn-block" type="submit" href="Carrito.html">Pagar</button>
 			</div>
 		</div>
 		<div class="col-sm-6 mt-3">
-			<div class="card justify-content-center p-3 margencarrito">				
-				<div class="col-12 mb-4">
+			<div class="card justify-content-center p-3 margencarrito">
+				<div class="col-12 mb-4 row-product">
 					<h4 class="d-flex justify-content-between align-items-center mb-3">
 						<span class="text-muted">Detalles de compra</span> <span
 							class="badge badge-secondary badge-pill">1</span>
 					</h4>
-					<table class="border">
-						<tr>
-							<td class="border">
-								+
-							</td>
-							<td>
-								1
-							</td>
-							<td>
-								-
-							</td>
-							<td>
-								T-Rex
-							</td>
+					<table class="d-grid" id="carrito">
+						<tr align="center">
+							<div class="row col-6">
+								<td class="col-2">
+									<button class="btn border"
+										onclick="sumar('cantidad1', 'precio1', 12000000)">+</button>
+								</td>
+								<td class="col-2" id="cantidad1">
+									0
+								</td>
+								<td class="col-2">
+									<button class="btn border"
+										onclick="restar('cantidad1', 'precio1', 12000000)">-</button>
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									Tyranosaurus-Rex
+								</td>
+								<td class="text-right" id="precio1">
+									0€
+								</td>
+							</div>
 						</tr>
-						<tr>
-							<td>
-								1
-							</td>
-							<td>
-								2
-							</td>
-							<td>
-								3
-							</td>
+						<tr align="center">
+							<div class="row col-6">
+								<td class="col-2">
+									<button class="btn border"
+										onclick="sumar('cantidad2', 'precio2', 10000000)">+</button>
+								</td>
+								<td class="col-2" id="cantidad2">
+									0
+								</td>
+								<td class="col-2">
+									<button class="btn border"
+										onclick="restar('cantidad2', 'precio2', 10000000)">-</button>
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									Brachiosaurus
+								</td>
+								<td class="text-right" id="precio2">
+									0€
+								</td>
+							</div>
 						</tr>
-						<tr>
-							<td>
-								1
-							</td>
-							<td>
-								2
-							</td>
-							<td>
-								3
-							</td>
+						<tr align="center">
+							<div class="row col-6">
+								<td class="col-2">
+									<button class="btn border"
+										onclick="sumar('cantidad3', 'precio3', 9000000)">+</button>
+								</td>
+								<td class="col-2" id="cantidad3">
+									0
+								</td>
+								<td class="col-2">
+									<button class="btn border"
+										onclick="restar('cantidad3', 'precio3', 9000000)">-</button>
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									Carnotaurus
+								</td>
+								<td class="text-right" id="precio3">
+									0€
+								</td>
+							</div>
+						</tr>
+						<tr align="center">
+							<div class="row col-6">
+								<td class="col-2">
+									<button class="btn border"
+										onclick="sumar('cantidad4', 'precio4', 8000000)">+</button>
+								</td>
+								<td class="col-2" id="cantidad4">
+									0
+								</td>
+								<td class="col-2">
+									<button class="btn border"
+										onclick="restar('cantidad4', 'precio4', 8000000)">-</button>
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									Baryonyx
+								</td>
+								<td class="text-right" id="precio4">
+									0€
+								</td>
+							</div>
+						</tr>
+						<tr align="right">
+							<div class="row col-6">
+								<td class="col-2">
+
+								</td>
+								<td class="col-2">
+
+								</td>
+								<td class="col-2">
+
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									
+								</td>
+								<td class="text-right">
+									<strong>Total: <span id="total">0</span>&euro;</strong>
+								</td>
+							</div>
 						</tr>
 					</table>
+					<div align="right">
+						<button class="btn btn-primary vaciar" type="submit" id="vaciar" onclick="vaciarCarrito()">
+							Vaciar
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
+
+		<script src="javaScript/javascript.js"></script>
 </body>
 
 </html>

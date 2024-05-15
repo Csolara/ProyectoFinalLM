@@ -206,6 +206,11 @@ body {
 .mastercard{
 	transform: translateX(7px);
 }
-.sumaryrestar{
-	border: solid black;
+.vaciar{
+	transform: translateY(10px);
 }
+.precio{
+	font-size: 40px;
+	background-color: black;
+	width: 20%;
+	transform: translateY(10px);
