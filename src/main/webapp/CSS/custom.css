@@ -211,6 +211,6 @@ body {
 }
 .precio{
 	font-size: 40px;
-	background-color: black;
 	width: 20%;
 	transform: translateY(10px);
+}

@@ -2,56 +2,10 @@
  * 
  */
 
-// Función para obtener los parámetros de la URL
-function obtenerParametrosURL() {
-    let urlParams = new URLSearchParams(window.location.search);
-    let nombreProducto = urlParams.get('nombre');
-    let precioProducto = urlParams.get('precio');
-    return { nombre: nombreProducto, precio: precioProducto };
-}
-
-// Función para agregar un producto al carrito
-function agregarProductoAlCarrito() {
-    // Obtener los parámetros de la URL
-    let { nombre, precio } = obtenerParametrosURL();
-
-    // Obtener la tabla del carrito
-    let tablaCarrito = document.getElementById("carrito");
-
-    // Crear una nueva fila para el producto
-    let nuevaFila = document.createElement("tr");
-    nuevaFila.setAttribute("align", "center");
-
-    // Crear las celdas para la nueva fila
-    let celdaCantidad = document.createElement("td");
-    celdaCantidad.classList.add("col-2");
-    celdaCantidad.innerHTML = `
-        <button class="btn border">+</button>
-        <span class="cantidadProducto">1</span>
-        <button class="btn border">-</button>
-    `;
-
-    let celdaNombre = document.createElement("td");
-    celdaNombre.classList.add("col-6");
-    celdaNombre.textContent = nombre;
-
-    let celdaPrecio = document.createElement("td");
-    celdaPrecio.classList.add("text-right");
-    celdaPrecio.textContent = precio + "€";
-
-    // Agregar las celdas a la nueva fila
-    nuevaFila.appendChild(celdaCantidad);
-    nuevaFila.appendChild(celdaNombre);
-    nuevaFila.appendChild(celdaPrecio);
-
-    // Insertar la nueva fila en la tabla del carrito
-    tablaCarrito.insertBefore(nuevaFila, tablaCarrito.lastChild.previousSibling);
-}
-
 // Llamar a la función para agregar el producto al carrito cuando la página se cargue
 window.onload = agregarProductoAlCarrito;
 
-/**function actualizarCantidadYPrecio(cantidadId, precioId, precioUnitario, cambio) {
+function actualizarCantidadYPrecio(cantidadId, precioId, precioUnitario, cambio) {
 	const cantidadElement = document.getElementById(cantidadId);
 	const precioElement = document.getElementById(precioId);
 
@@ -106,11 +60,10 @@ function vaciarCarrito() {
 
 	// Actualizar el total a 0
 	document.getElementById("total").innerText = "0";
-}*/
+}
 
 
 // FORMULARIO
-
 
 document.getElementById('cc-name').addEventListener('input', function(event) {
 	if (this.value.match(/[^a-zA-Z ]/g)) {

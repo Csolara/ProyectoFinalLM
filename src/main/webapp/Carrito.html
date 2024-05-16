@@ -92,7 +92,7 @@
 					</div>
 					<div class="col-md-6 mb-3">
 						<label id="numeroCuenta" for="cc-number">Número de Tarjeta de Crédito</label> <input
-							type="number" class="form-control" id="cc-number" required placeholder="1234123412341234">
+							type="number" class="form-control" id="cc-number" maxlength="16" required placeholder="1234123412341234">
 						<small class="text-muted">Deben ser 16 digitos</small>
 						<div class="invalid-feedback">Credit card number is
 							required</div>
@@ -101,14 +101,14 @@
 				<div class="row">
 					<div class="col-md-3 mb-3">
 						<label for="cc-expiration">Vencimiento</label> <input type="text" class="form-control"
-							id="cc-expiration" required placeholder="99/99">
+							id="cc-expiration" maxlength="5" required placeholder="99/99">
 						<div class="invalid-feedback">Fecha de vencimiento requerida en formato MM/AA</div>
 						<div class="invalid-feedback" id="date-error">La fecha de vencimiento no puede tener un mes
 							mayor a 12
 						</div>
 					</div>
 					<div class="col-md-3 mb-3">
-						<label for="cc-cvv">CVV</label> <input type="number" class="form-control" id="cc-cvv" required
+						<label for="cc-cvv">CVV</label> <input type="number" class="form-control" id="cc-cvv" maxlength="3" required
 							placeholder="999">
 						<div class="invalid-feedback">Security code required</div>
 					</div>
@@ -139,7 +139,7 @@
 					</div>
 				</div>
 				<hr class="mb-4">
-				<button class="btn btn-primary btn-lg btn-block" type="submit" href="Carrito.html">Pagar</button>
+				<button id="pagarButton" class="btn btn-primary btn-lg btn-block" type="button">Pagar</button>
 			</div>
 		</div>
 		<div class="col-sm-6 mt-3">
@@ -149,28 +149,99 @@
 						<span class="text-muted">Detalles de compra</span> <span
 							class="badge badge-secondary badge-pill">1</span>
 					</h4>
-					<table class="d-grid" id="carrito">						
+					<table class="d-grid" id="carrito">
 						<tr align="center">
 							<div class="row col-6">
 								<td class="col-2">
-									<button class="btn border">+</button>
+									<button class="btn border"
+										onclick="sumar('cantidad1', 'precio1', 12000000)">+</button>
 								</td>
-								<td class="col-2" id="cantidad">
+								<td class="col-2" id="cantidad1">
 									0
 								</td>
 								<td class="col-2">
-									<button class="btn border">-</button>
+									<button class="btn border"
+										onclick="restar('cantidad1', 'precio1', 12000000)">-</button>
 								</td>
 							</div>
 							<div class="row col-6">
-								<td class="col-6" id="nombre">
-									Carnotaurus
+								<td class="col-6">
+									Tyranosaurus-Rex
 								</td>
-								<td class="text-right" id="precio">
+								<td class="text-right" id="precio1">
 									0€
 								</td>
 							</div>
-						</tr>						
+						</tr>
+						<tr align="center">
+							<div class="row col-6">
+								<td class="col-2">
+									<button class="btn border"
+										onclick="sumar('cantidad2', 'precio2', 10000000)">+</button>
+								</td>
+								<td class="col-2" id="cantidad2">
+									0
+								</td>
+								<td class="col-2">
+									<button class="btn border"
+										onclick="restar('cantidad2', 'precio2', 10000000)">-</button>
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									Brachiosaurus
+								</td>
+								<td class="text-right" id="precio2">
+									0€
+								</td>
+							</div>
+						</tr>
+						<tr align="center">
+							<div class="row col-6">
+								<td class="col-2">
+									<button class="btn border"
+										onclick="sumar('cantidad3', 'precio3', 9000000)">+</button>
+								</td>
+								<td class="col-2" id="cantidad3">
+									0
+								</td>
+								<td class="col-2">
+									<button class="btn border"
+										onclick="restar('cantidad3', 'precio3', 9000000)">-</button>
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									Carnotaurus
+								</td>
+								<td class="text-right" id="precio3">
+									0€
+								</td>
+							</div>
+						</tr>
+						<tr align="center">
+							<div class="row col-6">
+								<td class="col-2">
+									<button class="btn border"
+										onclick="sumar('cantidad4', 'precio4', 8000000)">+</button>
+								</td>
+								<td class="col-2" id="cantidad4">
+									0
+								</td>
+								<td class="col-2">
+									<button class="btn border"
+										onclick="restar('cantidad4', 'precio4', 8000000)">-</button>
+								</td>
+							</div>
+							<div class="row col-6">
+								<td class="col-6">
+									Baryonyx
+								</td>
+								<td class="text-right" id="precio4">
+									0€
+								</td>
+							</div>
+						</tr>
 						<tr align="right">
 							<div class="row col-6">
 								<td class="col-2">
@@ -200,7 +271,7 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 
 		<script src="javaScript/javascript.js"></script>
 </body>
